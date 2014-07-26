@@ -1,8 +1,8 @@
 import soundcloud
 import credentials
 
-soundcloud = soundcloud.Client(client_id=credentials.client_id, client_secret=credentials.client_secret, username=credentials.username, password=credentials.passw)
-todaysplaylist = soundcloud.get('/playlists/'+credentials.pID)
+soundcloud = soundcloud.Client(client_id=credentials.sc_client_id, client_secret=credentials.sc_client_secret, username=credentials.sc_username, password=credentials.sc_passw)
+todaysplaylist = soundcloud.get('/playlists/'+credentials.sc_pID)
 
 def getTrax():
   playlist = open('playlist.txt','w')
