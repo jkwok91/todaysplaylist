@@ -8,8 +8,8 @@ def getTrax():
   playlist = open('playlist.txt','w')
   trax = todaysplaylist.tracks
   for track in trax:
-    title = track['title']
-    link = track['permalink_url']
+    title = track['title'].encode('utf-8')
+    link = track['permalink_url'].encode('utf-8')
     playlist.write(title+" ("+link+")\n")
 
 getTrax()
